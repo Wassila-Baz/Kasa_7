@@ -1,0 +1,18 @@
+.banner {
+  width: 1240px;
+  height: 223px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  background-image: url("../assets/images/Banner.png");
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  border-radius: 25px;
+}
+.banner.logo {
+  width: 210.322px;
+  height: 68px;
+}/*# sourceMappingURL=Banner.css.map */
