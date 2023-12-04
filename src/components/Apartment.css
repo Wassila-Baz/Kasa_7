@@ -1,0 +1,27 @@
+.apartment {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), #FF6060;
+  border-radius: 10px;
+  display: grid;
+  justify-content: space-between;
+  place-items: end;
+  flex-basis: 28%;
+  width: 340px;
+  height: 340px;
+  font-size: 18px;
+  line-height: 142.6%;
+  padding-left: 10px;
+  min-width: 200px;
+  min-height: 200px;
+}
+@media (max-width: 768px) {
+  .apartment {
+    flex-basis: 100%;
+  }
+}
+
+.subtitle {
+  width: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}/*# sourceMappingURL=Apartment.css.map */

@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar.jsx";
 import Banner from "./components/Banner.jsx"
 import ApartementGrid from "./components/ApartmentGrid.jsx"
 import Main from "./components/Main.jsx"
+import Footer from "./components/Footer.jsx"
+
 import './App.css';
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
         <Banner />
         <ApartementGrid/>
       </Main>
+      <Footer/>
     </div>
   );
 }

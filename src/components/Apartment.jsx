@@ -1,10 +1,13 @@
 import React from 'react'
-import "./ApartmentGrid.scss"
+import "./Apartment.scss"
+
 
 function Apartment() {
   return (
-    <div>Titre de la location</div>
-  )
+    <div className='apartment'>
+      <h3 className='subtitle'>Titre de la location</h3>
+    </div>
+  );
 }
 
 export default Apartment
