@@ -8,4 +8,14 @@
     place-items: center;
 
 }
+.footer__text{
+    @media (max-width: 768px) {
+            display: flex;
+            width: 133.594px;
+            height: 46px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 142.6%;
+            }
 
+}

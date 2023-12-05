@@ -14,15 +14,18 @@
     padding-left: 10px;
     min-width: 200px;
     min-height: 200px;
-    
+
     @media (max-width: 768px) {
         flex-basis: 100%;
       }
-}
+        & a {
+            text-decoration: none;
+        }
+            & &__subtitle {
+                width: 50%;
+                color: white;
+                font-size: 18px;
+                font-weight: 500; 
+            }
+    }
 
-.subtitle {
-    width: 50%;
-    color: white;
-    font-size: 18px;
-    font-weight: 500; 
-}

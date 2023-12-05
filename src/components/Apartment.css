@@ -18,8 +18,10 @@
     flex-basis: 100%;
   }
 }
-
-.subtitle {
+.apartment a {
+  text-decoration: none;
+}
+.apartment .apartment__subtitle {
   width: 50%;
   color: white;
   font-size: 18px;

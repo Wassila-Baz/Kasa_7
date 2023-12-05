@@ -6,4 +6,15 @@
   min-height: 130px;
   display: grid;
   place-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer__text {
+    display: flex;
+    width: 133.594px;
+    height: 46px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
 }/*# sourceMappingURL=Footer.css.map */
