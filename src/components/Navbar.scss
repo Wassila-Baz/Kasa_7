@@ -11,13 +11,26 @@
 & a {
     text-decoration: none;
     color:$primary-color;
+    @media (max-width: 768px){ 
+       text-transform: uppercase;
+       font-size: 12px;
+     
+     
+ }
 }
 
 & a:hover {
     text-decoration: underline; 
+    
     }
 }
 
 .navbar__logo {
     margin-right: auto;
+    @media (max-width: 768px){ 
+        width: 145px;
+
+
+     
+ }
 }

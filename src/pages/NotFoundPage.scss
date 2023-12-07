@@ -1,0 +1,31 @@
+@import "../styles/variables";
+
+.error-page{
+    color:$primary-color;
+
+    h1 {
+        display: flex;
+        height: 263px;
+        justify-content: center;
+        font-size: 288px;
+        line-height: 142.6%; 
+    }
+            h2 {
+                display: flex;
+                justify-content: center;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 142.6%; 
+
+            }
+                a {
+                    color: $primary-color;
+                    font-size: 18px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    line-height: 142.6%; /* 25.668px */
+                    text-decoration-line: underline;
+                    display: flex;
+                    justify-content: center;
+                }
+}
