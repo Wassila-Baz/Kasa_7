@@ -4,14 +4,10 @@
   display: grid;
   justify-content: space-between;
   place-items: end;
-  flex-basis: 28%;
-  width: 340px;
-  height: 340px;
+  flex-basis: 30%;
   font-size: 18px;
   line-height: 142.6%;
   padding-left: 10px;
-  min-width: 200px;
-  min-height: 200px;
 }
 @media (max-width: 768px) {
   .apartment {
