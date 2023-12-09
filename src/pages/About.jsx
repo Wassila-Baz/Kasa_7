@@ -10,6 +10,8 @@ function About() {
       <div className="about__container">
         <ApartmentDescription />
         <ApartmentDescription />
+        <ApartmentDescription />
+        <ApartmentDescription />
       </div>
     </>
   );

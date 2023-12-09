@@ -17,13 +17,6 @@ export function ApartmentDescription() {
           adipisci deserunt nisi, voluptate at!Équipements
         </p>
       </div>
-      <div className="apartment__description">
-        <p className="description__header">
-          <span>Description</span>
-          <i className="fa-solid fa-chevron-down"></i>
-        </p>
-        <p className="description__content">Équipements</p>
-      </div>
     </div>
   );
 }

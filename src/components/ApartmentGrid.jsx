@@ -1,16 +1,27 @@
-import React from 'react'
-import "../components/ApartmentGrid.scss"
-import Apartment from "./Apartment.jsx"
+import React, { useState, useEffect } from "react";
+import "../components/ApartmentGrid.scss";
+import ApartmentCard from "./ApartmentCard.jsx";
 
 function ApartmentGrid() {
-  return (
-    <div className='grid'>
-        <Apartment/>
-        <Apartment/>
-        <Apartment/>
-        <Apartment/>
-    </div>
-  )
-}
+  const [apartments, setApartments] = useState([]);
 
-export default ApartmentGrid
+  useEffect(fetchApartments,[]);
+ 
+
+
+  function fetchApartments() {
+    fetch("logements.json")
+      .then((res) => res.json())
+      .then((res) => setApartments(res))
+      .catch(console.error);
+  }
+  
+
+  return (
+    <div className="grid">
+      {apartments.map((apartment) => (
+        <ApartmentCard title={apartment.title} imageUrl={apartment.cover}/>
+      ))}
+    </div>);
+      }
+export default ApartmentGrid;

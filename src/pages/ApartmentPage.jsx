@@ -39,7 +39,10 @@ function ApartmentPage() {
           </div>
         </div>
       </div>
-      <ApartmentDescription />
+      <div className="container-description">
+        <ApartmentDescription />
+        <ApartmentDescription />
+      </div>
     </div>
   );
 }
