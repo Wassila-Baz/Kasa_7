@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../components/ApartmentGrid.scss";
-import ApartmentCard from "./ApartmentCard.jsx";
+import "../components/Grid.scss";
+import Card from "./Card.jsx";
 
-function ApartmentGrid() {
+function Grid() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(fetchApartments,[]);
@@ -20,8 +20,9 @@ function ApartmentGrid() {
   return (
     <div className="grid">
       {apartments.map((apartment) => (
-        <ApartmentCard title={apartment.title} imageUrl={apartment.cover}/>
+        <Card key={apartment.id} title={apartment.title} imageUrl={apartment.cover} />
       ))}
-    </div>);
-      }
-export default ApartmentGrid;
+    </div>
+  );
+}
+export default Grid;

@@ -1,7 +1,7 @@
 import React from "react";
-import "./ApartmentDescription.scss";
+import "./Description.scss";
 
-export function ApartmentDescription() {
+export function Description() {
   return (
     <div className="section-apartment">
       <div className="apartment__description">
@@ -20,4 +20,4 @@ export function ApartmentDescription() {
     </div>
   );
 }
-export default ApartmentDescription;
+export default Description;

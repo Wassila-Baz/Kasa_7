@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Main.scss"
+import "../layout/Main.scss"
 
 function Main(props) {
   const { children } = props;

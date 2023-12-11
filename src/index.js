@@ -6,14 +6,15 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About.jsx"
 import NotFoundPage from "./pages/NotFoundPage.jsx"
 import ReactDOM from "react-dom/client";
-
+import Main from "./layout/Main.jsx";
 import reportWebVitals from "./reportWebVitals";
-import ApartmentPage from "./pages/ApartmentPage";
+import ApartmentPage from "./pages/AprtPage";
 
 const HeaderFooterLayout = () => {
   return (
     <>
       <Navbar />
+      <Main />
       <Outlet />
       <Footer />
     </>
@@ -21,7 +22,7 @@ const HeaderFooterLayout = () => {
 };
 const router = createBrowserRouter([
   {
-    element: <HeaderFooterLayout />,//const HeaderFooterLayout
+    element: <HeaderFooterLayout />,
     errorElement: <NotFoundPage />,
     children: [
       {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/apartment",
+        path: "/flat",
         element: <ApartmentPage />,
       },
       {
