@@ -1,41 +1,46 @@
-// Importez toutes les dépendances nécessaires au niveau supérieur
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/jsx-no-undef */
+import React from "react";
+import { useLocation } from 'react-router-dom';
 import "./AprtPage.scss";
-import ImageBanner from '../components/ImageBanner';
-import Header from "../components/Header";
 import Description from "./Description";
-import { useLocation } from "react-router-dom";
+import ImageBanner from "../components/ImageBanner";
 
-// Déclarez votre composant
 function ApartmentPage() {
   const location = useLocation();
-  const [flat, setFlat] = useState(null);
-
-  useEffect(() => {
-    fetchApartmentData();
-  }, []);
-
-  function fetchApartmentData() {
-    fetch("logements.json")
-      .then((res) => res.json())
-      .then((flats) => {
-        console.log('Fetched flats:', flats);
-        const apartmentId = location.state?.apartmentId;
-        const flat = flats.find((flat) => flat.id === apartmentId);
-        setFlat(flat);
-      })
-      .catch(console.error);
-  }
-
-  if (!flat) {
-    return <div>Loading...</div>;
-  }
-
+  console.log ("location", location)
   return (
     <div className="apartment-page">
-      selected flat:{JSON.stringify(flat)}
-      <ImageBanner imageUrl={flat.cover} />
-      <Header title={flat.title} />
+      <div>
+      <ImageBanner  />
+      </div>
+      <div className="header">
+        <div>
+          <div className="title" />
+          <h1>Cozy loft on the Canal Saint-Martin Paris, Île-de-France</h1>
+          <h2>Paris, Île-de-France</h2>
+          <div className="tags">
+            <span>Cozy</span>
+            <span>Canal</span>
+            <span>Paris 10</span>
+          </div>
+        </div>
+        <div className="owner">
+          <div className="name-badge">
+            <h3>
+              <span>Alexandre </span>
+              <span>Dumas</span>
+            </h3>
+            <div className="badge"></div>
+          </div>
+          <div className="stars">
+            <span className="full">★</span>
+            <span className="full">★</span>
+            <span className="full">★</span>
+            <span className="empty">★</span>
+            <span className="empty">★</span>
+          </div>
+        </div>
+      </div>
       <div className="container-description">
         <Description />
         <Description />
@@ -44,5 +49,4 @@ function ApartmentPage() {
   );
 }
 
-// Exportez votre composant à la fin du fichier
 export default ApartmentPage;
