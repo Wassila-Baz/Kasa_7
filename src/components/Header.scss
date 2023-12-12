@@ -52,7 +52,7 @@
         .name-badge {
             display: flex;
 
-            .badge {
+            .badge img {
                 width: 64px;
                 height: 64px;
                 background-color: #C4C4C4;
@@ -61,49 +61,6 @@
         }
     }
 
-    .stars {
-        font-size: 30px;
-        @media (max-width: 768px){ 
-            margin: auto;
-            margin-right:150px ;
-         
-     }
+    
 
-
-        .empty {
-            color: $gray-light-color;
-        }
-
-        .full {
-            color: $primary-color;
-        }
-    }
-
-    .tags {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; // les 3 auront la même taille 
-        width: 115px;
-        height: 25px;
-        gap: 10px;
-
-        span {
-  
-            background-color: $primary-color;
-            color: white;
-            text-align: center;
-            border-radius: 10px;
-            width: 115px;
-            height: 23px;
-        }
-    }
-
-.owner {
-
-    margin-left: auto;
-    @media (max-width: 768px){ 
-           display: flex;
-           flex-direction: row-reverse;
-           justify-content: space-between;
-        
-    }
-}
+ 

@@ -3,23 +3,18 @@ import "./Card.scss";
 import { Link } from "react-router-dom";
 
 function Card(props) {
-  console.log('Card props:', props); // Ajoutez cette ligne
-
-  const state = {
-    pathname: "/flat",
-    state: {
-      userId: "ben"
-    }
-  };
-
   return (
-    <Link to="/flat" state={state}>
-      <div className='apartment'>
+    <Link
+      to="/flat"
+      state={{
+        apartmentId: props.id
+      }}
+    >
+      <div className="apartment">
         <img src={props.imageUrl} alt="" />
-        <h3 className='apartment__subtitle'>{props.title}</h3>
+        <div className="apartment__subtitle">{props.title}</div>
       </div>
     </Link>
   );
 }
-
 export default Card;

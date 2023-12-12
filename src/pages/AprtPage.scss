@@ -54,7 +54,7 @@
         .name-badge {
             display: flex;
 
-            .badge {
+            .badge img {
                 width: 64px;
                 height: 64px;
                 background-color: #C4C4C4;
@@ -64,17 +64,13 @@
     }
 
     .stars {
+        color: $gray-light-color;
         font-size: 30px;
         @media (max-width: 768px){ 
             margin: auto;
             margin-right:150px ;
          
      }
-
-
-        .empty {
-            color: $gray-light-color;
-        }
 
         .full {
             color: $primary-color;

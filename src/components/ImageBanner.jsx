@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function ImageBanner(props) {
   return (
     <div className='image__banner' >
