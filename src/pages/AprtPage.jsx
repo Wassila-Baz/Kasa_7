@@ -27,7 +27,6 @@ return (
 )
   return (
     <div className="apartment-page">
-      selected flat: {JSON.stringify(selectedFlat)}
         <ImageBanner imageUrl={selectedFlat.cover} />
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">

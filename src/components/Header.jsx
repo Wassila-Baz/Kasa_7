@@ -3,9 +3,8 @@ import React from 'react';
 function ApartmentHeader(props) {
   const id = props.flat;
   const name = id.host.name;
-  const [firstName, lastName] = name.split("");
+  const [firstName, lastName] = name.split("");// Division du 'name' en prénom et nom de famille
 
-  console.log("props in apartment header:", props);
 
   return (
     <div className="header">
@@ -30,12 +29,10 @@ function ApartmentHeader(props) {
           </div>
         </div>
         <div className="stars">
-          <span className="full">★</span>
-          <span className="full">★</span>
-          <span className="full">★</span>
-          <span >★</span>
-          <span >★</span>
-        </div>
+        {[1, 2, 3, 4, 5].map((number) => (
+          <span key={number} className={props.flat.rating >= number ? "full" : ""}>★</span>
+        ))}
+        </div>      
       </div>
     </div>
   );
