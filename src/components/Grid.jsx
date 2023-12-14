@@ -20,7 +20,9 @@ function Grid() {
   return (
     <div className="grid">
       {apartments.map((apartment) => (
-        <Card key={apartment.title} imageUrl={apartment.cover} id={apartment.id} />
+        <Card key={apartment.title} 
+        imageUrl={apartment.cover} 
+        id={apartment.id} />
       ))}
     </div>
   );

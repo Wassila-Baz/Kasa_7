@@ -30,8 +30,11 @@ return (
         <ImageBanner imageUrl={selectedFlat.cover} />
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
-        <Description />
-        <Description />
+        <Description title="Description" content={selectedFlat.description}/>
+        <Description title="Equipements" 
+        content={selectedFlat.equipments.map((eq)=>(
+          <li>{eq}</li> //
+        ))}/>
       </div>
     </div>
   );

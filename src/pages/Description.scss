@@ -3,6 +3,7 @@
 
     display:flex;
     gap: 20px;
+    flex-basis: 50%; //
     @media (max-width: 768px){ 
         flex-direction: column;
      
@@ -36,7 +37,11 @@
     padding: 1rem;
     border-radius:10px ;
 }
-p{
+p {
     margin-block: 0;
 }
 }
+li {
+    list-style-type: none;
+  }
+  

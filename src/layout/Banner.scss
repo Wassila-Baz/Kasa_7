@@ -14,6 +14,12 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px) {
+      
+flex-shrink: 0;
+    }
+ 
+
     &.logo {
       width: 210.322px;
       height: 68px;

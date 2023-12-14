@@ -1,20 +1,18 @@
 import React from "react";
 import "./Description.scss";
 
-export function Description() {
+export function Description(props) {
+
+  //const [visible, setContentVisible]=useState(false)
   return (
     <div className="section-apartment">
       <div className="apartment__description">
         <p className="description__header">
-          <span>Description</span>
+          <span>{props.title}</span>
           <i className="fa-solid fa-chevron-down"></i>
         </p>
         <p className="description__content">
-          {" "}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
-          delectus pariatur, cumque, nobis optio dicta repellat placeat mollitia
-          totam repellendus incidunt quibusdam molestias aliquam reprehenderit
-          adipisci deserunt nisi, voluptate at!Équipements
+          {props.content} 
         </p>
       </div>
     </div>
