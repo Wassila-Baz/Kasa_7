@@ -1,32 +1,33 @@
 @import "../styles/variables";
-.section-apartment{
 
-    display:flex;
-    gap: 20px;
-    flex-basis: 50%; //
-    @media (max-width: 768px){ 
-        flex-direction: column;
-     
- }
+.section-apartment {
+  display: flex;
+  gap: 20px;
+  flex-basis: 50%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
-.apartment__description{
 
-    .description__header{
-        margin-top: 20px;
-        display: flex;
-        width: 582px;
-        padding: 10px 20px 10px 10px;
-        align-items: center;
-        background-color: $primary-color;
-        color: $white-color;
-        border-radius: 10px; 
-        justify-content: space-between;
-        i{
-            cursor: pointer;
-        }
+.apartment__description {
+  .description__header {
+    margin-top: 20px;
+    display: flex;
+    width: 582px;
+    padding: 10px 20px 10px 10px;
+    align-items: center;
+    background-color: $primary-color;
+    color: $white-color;
+    border-radius: 10px;
+    justify-content: space-between;
 
-}
-.description__content{
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .description__content {
     width: 580px;
     position: relative;
     top: -10px;
@@ -35,13 +36,29 @@
     color: $primary-color;
     padding: 10px 20px 10px 10px;
     padding: 1rem;
-    border-radius:10px ;
-}
-p {
-    margin-block: 0;
-}
-}
-li {
-    list-style-type: none;
+    border-radius: 10px;
+    animation: slide-in 0.5s ease-in-out;
+
+    &.hidden {
+      animation: slide-out 0.5s ease-in-out;
+    }
   }
-  
+
+  p {
+    margin-block: 0;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+@keyframes slide-in {
+    0% {
+      transform: translateY(-100%);
+      transform-origin: 50% 0; /* Ajustez ici pour le point de départ */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

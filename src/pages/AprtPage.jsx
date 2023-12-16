@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import "./AprtPage.scss";
 import Description from "./Description";
-import ImageBanner from "../components/ImageBanner";
+import Banner from "../layout/Banner";
 import ApartmentHeader from "../components/Header";
 
 function ApartmentPage() {
@@ -27,7 +27,7 @@ return (
 )
   return (
     <div className="apartment-page">
-        <ImageBanner imageUrl={selectedFlat.cover} />
+        <Banner imageUrl="src/assets/images/Banner.png" />
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
         <Description title="Description" content={selectedFlat.description}/>
