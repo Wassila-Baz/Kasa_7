@@ -6,7 +6,7 @@ import "./HomePage.scss";
 function HomePage() {
   return (
     <>
-      <Banner />
+    <Banner imageUrl={process.env.PUBLIC_URL + "/assets/images/Banner.png"} />
       <Grid />
     </>
   );

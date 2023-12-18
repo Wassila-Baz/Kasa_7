@@ -32,14 +32,6 @@
         line-height: 142.6%; /* 25.668px */
     }
 
-    img {
-        width: 100%;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
-        margin-bottom: 25px;
-    }
-
     .header {
         display: flex;
         @media (max-width: 768px){

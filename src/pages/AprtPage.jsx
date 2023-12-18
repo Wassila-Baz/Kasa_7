@@ -6,6 +6,7 @@ import Description from "./Description";
 import Banner from "../layout/Banner";
 import ApartmentHeader from "../components/Header";
 
+
 function ApartmentPage() {
   const location = useLocation();
   const [selectedFlat, setselectedFlat] = useState(null); // Ajout de la virgule ici
@@ -27,11 +28,11 @@ return (
 )
   return (
     <div className="apartment-page">
-        <Banner imageUrl="src/assets/images/Banner.png" />
+        <Banner pictures={selectedFlat.pictures} />
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
         <Description title="Description" content={selectedFlat.description}/>
-        <Description title="Equipements" 
+        <Description title="Équipements" 
         content={selectedFlat.equipments.map((eq)=>(
           <li>{eq}</li> //
         ))}/>

@@ -1,17 +1,20 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-import "./Navbar.scss"
-import img from "../../src/assets/images/LOGO.svg"
+import { NavLink, Link } from 'react-router-dom';
+import "./Navbar.scss";
+import img from "../../src/assets/images/LOGO.svg";
 
 function Navbar() {
-   return (
+  return (
     <nav className="navbar">
-      <div className='navbar__logo'>
-        <img src={img} alt='logo'/>
-      </div>
-        <NavLink to="/"><div>Accueil</div></NavLink>
-        <NavLink to="/about"><div>À propos</div></NavLink>
+      <Link to="/"> 
+        <div className='navbar__logo'>
+          <img src={img} alt='logo'/>
+        </div>
+      </Link>
+      <NavLink to="/"><div>Accueil</div></NavLink>
+      <NavLink to="/about"><div>À propos</div></NavLink>
     </nav>
-   )
-  }
-  export default Navbar
+  );
+}
+
+export default Navbar;
