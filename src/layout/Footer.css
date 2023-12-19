@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footer {
   background-color: black;
   color: white;
@@ -6,6 +7,9 @@
   min-height: 130px;
   display: grid;
   place-items: center;
+  position: relative; /* Définit la position relative pour utiliser 'bottom' */
+  bottom: 0; /* Place le footer en bas de la page */
+  width: 100%; /* Assure que le footer occupe la largeur complète de la page */
 }
 
 @media (max-width: 768px) {

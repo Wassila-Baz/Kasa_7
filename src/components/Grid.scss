@@ -12,6 +12,7 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
+    margin-left: 0;
 
     @media (max-width: 768px) {
         background: none;
@@ -21,6 +22,6 @@
       }
     
       .card {
-        margin: 0 auto; /* Ajoutez cette ligne pour centrer horizontalement les cartes */
+        margin: 0 ; /* Ajoutez cette ligne pour centrer horizontalement les cartes */
       }
     }

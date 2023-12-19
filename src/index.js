@@ -14,13 +14,14 @@ const HeaderFooterLayout = () => {
   return (
     <>
       <Navbar />
-      <Main />
+      <Main>
         <Outlet />
-      <Main />
+      </Main>
       <Footer />
     </>
   );
 };
+
 const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,

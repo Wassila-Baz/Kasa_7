@@ -18,4 +18,8 @@
     font-weight: 500;
     line-height: 142.6%; /* 18.538px */
   }
+}
+
+.img-banner {
+  background-image: "../logo.svg";
 }/*# sourceMappingURL=About.css.map */

@@ -1,6 +1,8 @@
+@charset "UTF-8";
 .section-apartment {
   display: flex;
   gap: 20px;
+  flex-basis: 50%;
 }
 @media (max-width: 768px) {
   .section-apartment {
@@ -21,6 +23,10 @@
 }
 .apartment__description .description__header i {
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.section-apartment.open .apartment__description .description__header i {
+  transform: rotate(180deg);
 }
 .apartment__description .description__content {
   width: 580px;
@@ -32,7 +38,25 @@
   padding: 10px 20px 10px 10px;
   padding: 1rem;
   border-radius: 10px;
+  animation: slide-in 0.5s ease-in-out;
+}
+.apartment__description .description__content.hidden {
+  animation: slide-out 0.5s ease-in-out;
 }
 .apartment__description p {
   margin-block: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    transform-origin: 50% 0; /* Ajustez ici pour le point de départ */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=Description.css.map */

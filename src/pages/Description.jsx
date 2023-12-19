@@ -9,14 +9,11 @@ export function Description(props) {
   };
 
   return (
-    <div className="section-apartment">
+    <div className={`section-apartment ${visible ? 'open' : ''}`}>
       <div className="apartment__description">
-        <p className="description__header">
+        <p className="description__header" onClick={handleCollaps}>
           <span>{props.title}</span>
-          <i
-            className={`fa-solid fa-chevron-down ${visible ? "open" : ""}`}
-            onClick={handleCollaps}
-          ></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </p>
         {visible && ( 
           <p className="description__content">

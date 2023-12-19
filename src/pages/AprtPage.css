@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .apartment-page {
   color: #FF6060;
 }
@@ -25,20 +26,17 @@
   font-weight: 500;
   line-height: 142.6%; /* 25.668px */
 }
-.apartment-page img {
-  width: 100%;
-  height: 415px;
-  border-radius: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 25px;
-}
 .apartment-page .header {
   display: flex;
+  margin: 10px;
 }
 @media (max-width: 768px) {
   .apartment-page .header {
     flex-direction: column;
+    margin: 10px;
+  }
+  .apartment-page .header .title {
+    margin-bottom: 10px; /* Ajout de marge entre le titre et les étoiles */
   }
 }
 .apartment-page .header .title {
@@ -47,32 +45,29 @@
 .apartment-page .header .name-badge {
   display: flex;
 }
-.apartment-page .header .name-badge .badge {
+.apartment-page .header .name-badge .badge img {
   width: 64px;
   height: 64px;
   background-color: #C4C4C4;
   border-radius: 50%;
 }
 .apartment-page .stars {
+  color: #E3E3E3;
   font-size: 30px;
 }
 @media (max-width: 768px) {
   .apartment-page .stars {
     margin: auto;
-    margin-right: 150px;
+    margin-left: 0; /* Ajustez la marge à gauche à 0 */
+    margin-right: auto;
   }
-}
-.apartment-page .stars .empty {
-  color: #E3E3E3;
 }
 .apartment-page .stars .full {
   color: #FF6060;
 }
 .apartment-page .tags {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 115px;
-  height: 25px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 .apartment-page .tags span {
@@ -80,7 +75,6 @@
   color: white;
   text-align: center;
   border-radius: 10px;
-  width: 115px;
   height: 23px;
 }
 

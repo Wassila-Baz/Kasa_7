@@ -1,36 +1,48 @@
 @import "../styles/variables";
 
-.navbar{
+.navbar {
     display: flex;
     height: 68px;
     align-items: center;
     padding: 0 2rem;
-    text-align: right; 
-    gap: 57px;
+    text-align: right;
 
-& a {
-    text-decoration: none;
-    color:$primary-color;
-    @media (max-width: 768px){ 
-       text-transform: uppercase;
-       font-size: 12px;
-     
-     
- }
-}
-
-& a:hover {
-    text-decoration: underline; 
-    
+    @media (max-width: 768px) {
+       padding: 0 5rem;
     }
-}
-
-.navbar__logo {
-    margin-right: auto;
-    @media (max-width: 768px){ 
+    
+    .navbar__logo img {
+      margin-right: auto;
+      
+      @media (max-width: 768px) {
         width: 145px;
-
-
-     
- }
+      }
+    }
+  
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-left: auto;
+      
+      @media (max-width: 768px) {
+        gap: 20px;
+      }
+  
+      a {
+        text-decoration: none;
+        color: $primary-color;
+  
+        @media (max-width: 768px) {
+          text-align: center; // Centrer le texte sur les petits écrans
+          margin: 0; // Supprimer la marge
+          font-size: 14px; // Ajuster la taille de la police pour une meilleure lisibilité
+          text-transform: uppercase;
+        }
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
 }

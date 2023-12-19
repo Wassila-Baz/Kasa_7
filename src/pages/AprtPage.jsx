@@ -28,7 +28,7 @@ return (
 )
   return (
     <div className="apartment-page">
-        <Banner pictures={selectedFlat.pictures} />
+        <Banner pictures={selectedFlat.pictures} showArrows={true} /> 
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
         <Description title="Description" content={selectedFlat.description}/>

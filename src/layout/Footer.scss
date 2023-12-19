@@ -1,21 +1,25 @@
+
+
 .footer {
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
-    min-height:130px;
+    min-height: 130px;
     display: grid;
     place-items: center;
-
+    position: relative; /* Définit la position relative pour utiliser 'bottom' */
+    bottom: 0; /* Place le footer en bas de la page */
+    width: 100%; /* Assure que le footer occupe la largeur complète de la page */
 }
-.footer__text{
-    @media (max-width: 768px) {
-            display: flex;
-            width: 133.594px;
-            height: 46px;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 142.6%;
-            }
 
+.footer__text {
+    @media (max-width: 768px) {
+        display: flex;
+        width: 133.594px;
+        height: 46px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 142.6%;
+    }
 }

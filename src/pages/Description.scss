@@ -22,11 +22,18 @@
     border-radius: 10px;
     justify-content: space-between;
 
+
     i {
       cursor: pointer;
+      transition: transform 0.3s ease-in-out; // Ajout de la transition
+    }
+
+    .section-apartment.open &  {
+      i {
+        transform: rotate(180deg); // Appliquez la rotation lorsqu'ouvert
+      }
     }
   }
-
   .description__content {
     width: 580px;
     position: relative;

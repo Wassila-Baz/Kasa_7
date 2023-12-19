@@ -11,8 +11,10 @@ function Navbar() {
           <img src={img} alt='logo'/>
         </div>
       </Link>
-      <NavLink to="/"><div>Accueil</div></NavLink>
-      <NavLink to="/about"><div>À propos</div></NavLink>
+      <div className='link'>
+        <NavLink to="/"><div>Accueil</div></NavLink>
+        <NavLink to="/about"><div>À propos</div></NavLink>
+     </div>
     </nav>
   );
 }
