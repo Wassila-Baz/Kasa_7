@@ -1,16 +1,16 @@
 // About.jsx
 
 import React from 'react';
-import Banner from '../layout/Banner.jsx';
 import Description from './Description.jsx';
 import './About.scss';
+import Banner from '../layout/Banner.jsx';
 
 function About() {
   const pictures = ["/Montagne.png"];
   return (
     <>
     <Banner pictures={pictures} showArrows={false} />
-      <div className='about__container'>; 
+      <div className='about__container'>; //collaps
         <Description title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."/>
         <Description title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme. "/>
         <Description title="Service" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."/>

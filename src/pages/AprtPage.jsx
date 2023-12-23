@@ -3,15 +3,17 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import "./AprtPage.scss";
 import Description from "./Description";
-import Banner from "../layout/Banner";
+import Carousel from "../layout/Carousel";
 import ApartmentHeader from "../components/Header";
 
 
 function ApartmentPage() {
-  const location = useLocation();
-  const [selectedFlat, setselectedFlat] = useState(null); // Ajout de la virgule ici
+  const location = useLocation(); //est utilisé pour obtenir l'objet location qui contient des informations sur l'URL actuelle.
+  const [selectedFlat, setselectedFlat] = useState(null); 
 
-  useEffect(fetchApartmentData, []);
+  useEffect(fetchApartmentData, []);//Comment faire pour exécuter un effet uniquement après le premier render de mon composant ? Par exemple, si je veux récupérer des données sur une API ? useEffect   nous permet d'effectuer notre effet une fois le rendu du composant terminé
+  //le premier paramètre passé à useEffect est une fonction.
+  //Le deuxième paramètre de  useEffect   accepte un tableau noté entre crochets : il s'agit du tableau de dépendances.
 
   function fetchApartmentData() {
     fetch("logements.json")
@@ -28,7 +30,7 @@ return (
 )
   return (
     <div className="apartment-page">
-        <Banner pictures={selectedFlat.pictures} showArrows={true} /> 
+        <Carousel pictures={selectedFlat.pictures} showArrows={true} /> 
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
         <Description title="Description" content={selectedFlat.description}/>

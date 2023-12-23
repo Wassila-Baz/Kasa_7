@@ -1,4 +1,13 @@
-.apartment {
+.apartment-container {
+    display: flex;
+    gap: 20px;  // Espace entre les cartes, ajustez selon vos besoins
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  .apartment {
     border-radius: 10px;
     display: grid;
     justify-content: space-between;
@@ -7,30 +16,31 @@
     font-size: 18px;
     line-height: 142.6%;
     padding-left: 10px;
-
+  
     img {
-        width: 340px;
-        height: 340px;
-        object-fit: cover;
-        border-radius: 10px;
-
-        @media (max-width: 768px) {
-            width: 335px;
-            height: 255px;
-        }
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 10px;
+  
+      @media (max-width: 768px) {
+        width: 335px;
+        height: 255px;
+      }
     }
-
+  
     @media (max-width: 768px) {
-        flex-basis: 100%;
+      flex-basis: 100%;
     }
-
+  
     a {
-        text-decoration: none;
+      text-decoration: none;
     }
-
+  
     &__subtitle {
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
     }
-}
+  }
+  

@@ -39,7 +39,8 @@
       margin: 10px;
 
       .title {
-        margin-bottom: 10px; /* Ajout de marge entre le titre et les étoiles */
+        margin-bottom: 10px;
+        align-self: flex-start; /* Aligner le titre à gauche */
       }
     }
 
@@ -64,9 +65,8 @@
     font-size: 30px;
 
     @media (max-width: 768px) {
-      margin: auto;
-      margin-left: 0; /* Ajustez la marge à gauche à 0 */
-      margin-right: auto;
+      font-size: 24px;
+      margin-right: 322px;
     }
 
     .full {

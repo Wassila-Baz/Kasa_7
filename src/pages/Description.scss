@@ -11,6 +11,7 @@
 }
 
 .apartment__description {
+  overflow: hidden;
   .description__header {
     margin-top: 20px;
     display: flex;
