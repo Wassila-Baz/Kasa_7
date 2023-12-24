@@ -90,12 +90,14 @@
 }
 
 .owner {
+  margin-top: 15px;
   margin-left: auto;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    
   }
 }
 

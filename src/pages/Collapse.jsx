@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "./Description.scss";
+import "./Collapse.scss";
 
 export function Description(props) {
   const [visible, setVisible] = useState(false);
 
-  const handleCollaps = () => {
+  const Collapse = () => {
     setVisible(!visible);
   };
 
   return (
     <div className={`section-apartment ${visible ? 'open' : ''}`}>
       <div className="apartment__description">
-        <p className="description__header" onClick={handleCollaps}>
+        <p className="description__header" onClick={Collapse}>
           <span>{props.title}</span>
           <i className="fa-solid fa-chevron-down"></i>
         </p>

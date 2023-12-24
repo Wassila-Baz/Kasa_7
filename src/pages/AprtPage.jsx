@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import "./AprtPage.scss";
-import Description from "./Description";
+import Collapse from "./Collapse";
 import Carousel from "../layout/Carousel";
 import ApartmentHeader from "../components/Header";
 
@@ -33,8 +33,8 @@ return (
         <Carousel pictures={selectedFlat.pictures} showArrows={true} /> 
         <ApartmentHeader flat={selectedFlat}/>
       <div className="container-description">
-        <Description title="Description" content={selectedFlat.description}/>
-        <Description title="Équipements" 
+        <Collapse title="Description" content={selectedFlat.description}/>
+        <Collapse title="Équipements" 
         content={selectedFlat.equipments.map((eq)=>(
           <li>{eq}</li> //
         ))}/>
