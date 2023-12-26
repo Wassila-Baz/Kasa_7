@@ -12,34 +12,39 @@
 
 .apartment__description {
   overflow: hidden;
+
   .description__header {
-    margin-top: 20px;
+
     display: flex;
     width: 582px;
     padding: 10px 20px 10px 10px;
     align-items: center;
-    background-color: $primary-color;
-    color: $white-color;
+    background-color: #FF6060;
+    color: #FFF;
     border-radius: 10px;
     justify-content: space-between;
-
-
+    position: relative;
+    z-index: 1;
 
     i {
       cursor: pointer;
-      transition: transform 0.3s ease-in-out; // Ajout de la transition
-    }
+      transition: transform 0.3s ease-in-out;
 
-    .section-apartment.open &  {
-      i {
-        transform: rotate(180deg); // Appliquez la rotation lorsqu'ouvert
+      .section-apartment.open & {
+        transform: rotate(180deg);
       }
     }
+
+
   }
+  .conteneur{
+    margin: 10px;
+    visibility: hidden;
+  }
+
   .description__content {
     width: 580px;
     position: relative;
-    top: -10px;
     z-index: -1;
     background-color: #F6F6F6;
     color: $primary-color;
@@ -47,9 +52,9 @@
     padding: 1rem;
     border-radius: 10px;
     animation: slide-in 0.5s ease-in-out;
-
     &.hidden {
       animation: slide-out 0.5s ease-in-out;
+      top: -10px; // Ajoutez cette ligne pour masquer le contenu au-dessus de l'en-tête
     }
   }
 
@@ -63,11 +68,11 @@ li {
 }
 
 @keyframes slide-in {
-    0% {
-      transform: translateY(-100%);
-      transform-origin: 50% 0; /* Ajustez ici pour le point de départ */
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-100%);
+    transform-origin: 50% 0; /* Ajustez ici pour le point de départ */
   }
+  100% {
+    transform: translateY(0);
+  }
+}
