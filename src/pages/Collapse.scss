@@ -12,9 +12,9 @@
 
 .apartment__description {
   overflow: hidden;
+  margin-top: 30px;
 
   .description__header {
-
     display: flex;
     width: 582px;
     padding: 10px 20px 10px 10px;
@@ -34,12 +34,15 @@
         transform: rotate(180deg);
       }
     }
-
-
   }
-  .conteneur{
+
+  .conteneur {
     margin: 10px;
     visibility: hidden;
+
+    .section-apartment.open & {
+      visibility: visible;
+    }
   }
 
   .description__content {
@@ -52,9 +55,10 @@
     padding: 1rem;
     border-radius: 10px;
     animation: slide-in 0.5s ease-in-out;
+
     &.hidden {
       animation: slide-out 0.5s ease-in-out;
-      top: -10px; // Ajoutez cette ligne pour masquer le contenu au-dessus de l'en-tête
+      top: -10px; // Ajustez cette ligne selon vos besoins
     }
   }
 
