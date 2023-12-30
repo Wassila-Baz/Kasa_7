@@ -36,7 +36,8 @@
     margin: 10px;
   }
   .apartment-page .header .title {
-    margin-bottom: 10px; /* Ajout de marge entre le titre et les étoiles */
+    margin-bottom: 10px;
+    align-self: flex-start; /* Aligner le titre à gauche */
   }
 }
 .apartment-page .header .title {
@@ -57,9 +58,8 @@
 }
 @media (max-width: 768px) {
   .apartment-page .stars {
-    margin: auto;
-    margin-left: 0; /* Ajustez la marge à gauche à 0 */
-    margin-right: auto;
+    font-size: 24px;
+    margin-right: 322px;
   }
 }
 .apartment-page .stars .full {
@@ -75,10 +75,11 @@
   color: white;
   text-align: center;
   border-radius: 10px;
-  height: 23px;
+  height: 25px;
 }
 
 .owner {
+  margin-top: 15px;
   margin-left: auto;
 }
 @media (max-width: 768px) {
@@ -91,7 +92,7 @@
 
 .container-description {
   display: flex;
-  gap: 76px;
+  gap: 50px;
   margin-bottom: 50px;
 }
 @media (max-width: 768px) {

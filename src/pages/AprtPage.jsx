@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import "./AprtPage.scss";
-import Collapse from "./Collapse";
-import Carousel from "../layout/Carousel";
+import Collapse from "../components/Collapse";
+import Carousel from "../components/Carousel";
 import ApartmentHeader from "../components/Header";
 
 

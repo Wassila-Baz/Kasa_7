@@ -7,7 +7,6 @@ import About from "./pages/About.jsx"
 import NotFoundPage from "./pages/NotFoundPage.jsx"
 import ReactDOM from "react-dom/client";
 import Main from "./layout/Main.jsx";
-import reportWebVitals from "./reportWebVitals";
 import ApartmentPage from "./pages/AprtPage";
 
 const HeaderFooterLayout = () => {
