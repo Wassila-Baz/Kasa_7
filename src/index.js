@@ -1,49 +1,33 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Footer from "./layout/Footer";
 import Navbar from "./components/Navbar";
-import About from "./pages/About.jsx"
-import NotFoundPage from "./pages/NotFoundPage.jsx"
+import About from "./pages/About.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 import ReactDOM from "react-dom/client";
 import Main from "./layout/Main.jsx";
-import ApartmentPage from "./pages/AprtPage";
+import ApartmentPage from "./pages/ApartmentPage.jsx";
 
-const HeaderFooterLayout = () => {
+const App = () => {
   return (
-    <>
-      <Navbar />
+    <Router>
       <Main>
-        <Outlet />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/flat" element={<ApartmentPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
       </Main>
-      <Footer />
-    </>
+    </Router>
   );
 };
 
-const router = createBrowserRouter([
-  {
-    element: <HeaderFooterLayout />,
-    errorElement: <NotFoundPage />,
-    children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/flat",
-        element: <ApartmentPage />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-    ],
-  },
-]);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );

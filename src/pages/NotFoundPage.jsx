@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import Main from '../layout/Main.jsx';
-import Footer from "../layout/Footer.jsx";
 import "./NotFoundPage.scss";
 
 function NotFoundPage() {
   return (
     <>
-      <Navbar />
+
       <Main>
         <div className="error-page">
           <h1>404</h1>
@@ -16,7 +14,7 @@ function NotFoundPage() {
           <Link to="/">Retourner sur la page d’accueil</Link>
         </div>
       </Main>
-      <Footer />
+
     </>
   );
 }

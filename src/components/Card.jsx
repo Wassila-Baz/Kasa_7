@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 
 function Card(props) {
   return (
-    <div>
-      <Link to="/flat" state={{apartmentId: props.id}}> 
-        <div className="apartment">
-          <img src={props.imageUrl} alt="" />
-          <p className="apartment__subtitle">{props.title}</p>
-        </div>
-      </Link>
+    <Link to={`/apartments/${props.id}`} key={props.id}>
+    <div className="apartment">
+      <img src={props.imageUrl} alt="" />
+      <p className="apartment__subtitle">{props.title}</p>
     </div>
+  </Link>
+
   );
 }
 
