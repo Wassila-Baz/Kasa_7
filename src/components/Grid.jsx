@@ -10,7 +10,7 @@ function Grid() {
 
 
   function fetchApartments() {
-    fetch("logements.json")
+    fetch("logements copie.json")
       .then((res) => res.json())
       .then((res) => setApartments(res))
       .catch(console.error);
