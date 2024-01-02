@@ -8,13 +8,14 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 142.6%;
+    margin-bottom: 5px;
   }
 
-  h2 {
+  p {
+    color: #FF6060;
     font-size: 18px;
     font-weight: 500;
     line-height: 142.6%;
-    margin-top: -20px;
   }
 
   h3 {
@@ -66,7 +67,7 @@
 
     @media (max-width: 768px) {
       font-size: 24px;
-      margin-right: 322px;
+      margin-right: 298px;
     }
 
     .full {

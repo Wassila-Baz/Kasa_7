@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import "./AprtPage.scss";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
@@ -7,12 +7,10 @@ import ApartmentHeader from "../components/Header";
 import logementsData from '../logements.json';
 
 function ApartmentPage() {
-  const location = useLocation();
   const { id } = useParams();
   const [selectedFlat, setselectedFlat] = useState(null);
 
   useEffect(() => {
-    console.log("ID:", id);
     fetchApartmentData();
   }, []);
 

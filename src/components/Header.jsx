@@ -11,7 +11,7 @@ function ApartmentHeader(props) {
       <div>
         <div className="title" />
         <h1>{id.title}</h1>
-        <h2>{id.location}</h2>
+        <p>{id.location}</p>
         <div className="tags">
           {id.tags.map((tag) => (
             <span key={tag}>{tag}</span>

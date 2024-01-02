@@ -5,9 +5,7 @@ import Card from "./Card.jsx";
 function Grid() {
   const [apartments, setApartments] = useState([]);
 
-  useEffect(fetchApartments,[]);
- 
-
+  useEffect(fetchApartments, []);
 
   function fetchApartments() {
     fetch("logements copie.json")
@@ -15,19 +13,19 @@ function Grid() {
       .then((res) => setApartments(res))
       .catch(console.error);
   }
-  
 
   return (
     <div className="grid">
-  
       {apartments.map((apartment) => (
-        <Card 
-        title={apartment.title} 
-        imageUrl={apartment.cover} 
-        id={apartment.id}
-        key={apartment.id} />
+        <Card
+          title={apartment.title}
+          imageUrl={apartment.cover}
+          id={apartment.id}
+          key={apartment.id}
+        />
       ))}
     </div>
   );
 }
+
 export default Grid;
