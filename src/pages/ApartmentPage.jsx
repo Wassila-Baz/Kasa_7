@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import "./AprtPage.scss";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
-import ApartmentHeader from "../components/Header";
+import ApartmentDetail from "../components/ApartmentDetail";
 import logementsData from '../logements.json';
 
 function ApartmentPage() {
@@ -26,7 +26,7 @@ function ApartmentPage() {
   return (
     <div className="apartment-page">
       <Carousel pictures={selectedFlat.pictures} showArrows={true} />
-      <ApartmentHeader flat={selectedFlat} />
+      <ApartmentDetail flat={selectedFlat} />
       <div className="container-description">
         <Collapse title="Description" content={selectedFlat.description} />
         <Collapse

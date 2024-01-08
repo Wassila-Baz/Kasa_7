@@ -1,6 +1,7 @@
 import React from 'react';
+import "./ApartmentDetail";
 
-function ApartmentHeader(props) {
+function ApartmentDetail(props) {
   const id = props.flat;
   const name = id.host.name;
   const [firstName, lastName] = name.split(" ");// Division du 'name' en prénom et nom de famille
@@ -38,4 +39,4 @@ function ApartmentHeader(props) {
   );
 }
 
-export default ApartmentHeader;
+export default ApartmentDetail;
