@@ -1,0 +1,15 @@
+@import "../styles/variables";
+
+.tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // les 3 auront la même taille 
+    gap: 10px;
+
+    span {
+      background-color: $primary-color;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      height: 25px;
+    }
+  }

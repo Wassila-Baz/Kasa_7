@@ -12,8 +12,8 @@ function Navbar() {
         </div>
       </Link>
       <div className='link'>
-        <NavLink to="/"><div>Accueil</div></NavLink>
-        <NavLink to="/about"><div>À propos</div></NavLink>
+        <NavLink to="/" activeClassName="active"><div>Accueil</div></NavLink> 
+        <NavLink to="/about" activeClassName="active"><div>À propos</div></NavLink>
      </div>
     </nav>
   );

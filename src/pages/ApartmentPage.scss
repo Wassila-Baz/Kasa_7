@@ -41,7 +41,8 @@
 
       .title {
         margin-bottom: 10px;
-        align-self: flex-start; /* Aligner le titre à gauche */
+        align-self: flex-start;
+        
       }
     }
 
@@ -72,20 +73,6 @@
 
     .full {
       color: $primary-color;
-    }
-  }
-
-  .tags {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); // les 3 auront la même taille 
-    gap: 10px;
-
-    span {
-      background-color: $primary-color;
-      color: white;
-      text-align: center;
-      border-radius: 10px;
-      height: 25px;
     }
   }
 }

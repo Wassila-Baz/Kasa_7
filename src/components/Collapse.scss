@@ -4,83 +4,85 @@
   display: flex;
   gap: 20px;
   flex-basis: 50%;
+  width: 94%;
 
   @media (max-width: 768px) {
     flex-direction: column;
   }
-}
 
-.apartment__description {
-  overflow: hidden;
-  margin-top: 30px;
-  @media (max-width: 768px) {
-    margin-left: 10px;
-  }
+  .apartment__description {
+    overflow: hidden;
+    margin-top: 30px;
+    width: 100%; // correction width
 
+    @media (max-width: 768px) {
+      margin-left: 10px;
+    }
 
-  .description__header {
-    display: flex;
-    width: 475px;
-    padding: 10px 20px 10px 10px;
-    align-items: center;
-    background-color: #FF6060;
-    color: #FFF;
-    border-radius: 10px;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
+    .description__header {
+      display: flex;
 
-    i {
-      cursor: pointer;
-      transition: transform 0.5s ease-in-out;
+      padding: 10px 20px 10px 10px;
+      align-items: center;
+      background-color: #FF6060;
+      color: #FFF;
+      border-radius: 10px;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
 
-      .section-apartment.open & {
-        transform: rotate(180deg);
+      i {
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+
+        .section-apartment.open & {
+          transform: rotate(180deg);
+        }
       }
     }
-  }
 
-  .conteneur {
-    margin: 10px;
-    visibility: hidden;
+    .conteneur {
+      margin: 10px;
+      visibility: hidden;
 
-    .section-apartment.open & {
-      visibility: visible;
+      .section-apartment.open & {
+        visibility: visible;
+      }
+    }
+
+    .description__content {
+
+      position: relative;
+      z-index: -1;
+      background-color: #F6F6F6;
+      color: $primary-color;
+      padding: 10px 20px 10px 10px;
+      padding: 1rem;
+      border-radius: 10px;
+      animation: slide-in 0.6s ease-in-out;
+
+      &.hidden {
+        animation: slide-out 0.6s ease-in-out;
+        top: -10px; // Ajustez cette ligne selon vos besoins
+      }
+    }
+
+    p {
+      margin-block: 0;
     }
   }
 
-  .description__content {
-    width: 474px;
-    position: relative;
-    z-index: -1;
-    background-color: #F6F6F6;
-    color: $primary-color;
-    padding: 10px 20px 10px 10px;
-    padding: 1rem;
-    border-radius: 10px;
-    animation: slide-in 0.6s ease-in-out;
+  li {
+    list-style-type: none;
+  }
 
-    &.hidden {
-      animation: slide-out 0.6s ease-in-out;
-      top: -10px; // Ajustez cette ligne selon vos besoins
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-100%);
+      transform-origin: 50% 0;
     }
-  }
-
-  p {
-    margin-block: 0;
-  }
-}
-
-li {
-  list-style-type: none;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateY(-100%);
-    transform-origin: 50% 0; /* Ajustez ici pour le point de départ */
-  }
-  100% {
-    transform: translateY(0);
+    100% {
+      transform: translateY(0);
+    }
   }
 }

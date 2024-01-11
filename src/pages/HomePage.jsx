@@ -9,7 +9,7 @@ function HomePage() {
   
   return (
     <>
-      <Banner pictures={pictures}   />
+      <Banner pictures={pictures}  text={"Chez vous, partout et ailleurs"}  />
       <Grid />
     </>
   );

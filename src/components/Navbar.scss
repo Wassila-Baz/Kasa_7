@@ -37,16 +37,15 @@
         color: $primary-color;
   
         @media (max-width: 768px) {
-          text-align: center; // Centrer le texte sur les petits écrans
-          margin: 0; // Supprimer la marge
-          font-size: 14px; // Ajuster la taille de la police pour une meilleure lisibilité
+          text-align: center; 
+          margin: 0; 
+          font-size: 14px; 
           text-transform: uppercase;
         }
   
-        &:hover,
-      &:active {
-        border-bottom: 2px solid $primary-color;
+        &.active {
+          border-bottom: 2px solid $primary-color;  // bordure inférieure corriger
+        }
         }
       }
     }
-}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Collapse.scss";
 
-export function Description(props) {
+function Description(props) {
   const [visible, setVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -10,7 +10,6 @@ export function Description(props) {
 
   return (
     <div className={`section-apartment ${visible ? 'open' : ''}`}>
-      <div className="conteneur" />
       <div className="apartment__description">
         <p className="description__header" onClick={toggleVisibility}>
           <span>{props.title}</span>

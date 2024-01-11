@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .apartment-page {
   color: #FF6060;
 }
@@ -37,7 +38,7 @@
   }
   .apartment-page .header .title {
     margin-bottom: 10px;
-    align-self: flex-start;
+    align-self: flex-start; /* Aligner le titre à gauche */
   }
 }
 .apartment-page .header .title {
@@ -89,4 +90,4 @@
     gap: 20px;
     margin-bottom: 20px;
   }
-}/*# sourceMappingURL=ApartmentPage.css.map */
+}/*# sourceMappingURL=AprtPage.css.map */

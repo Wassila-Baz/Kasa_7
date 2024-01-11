@@ -1,23 +1,25 @@
+
 import React from 'react';
 import "./ApartmentDetail";
+import Tags from "../components/Tags"
 
 function ApartmentDetail(props) {
+
   const id = props.flat;
   const name = id.host.name;
-  const [firstName, lastName] = name.split(" ");// Division du 'name' en prénom et nom de famille
+  
+
+  const [firstName, lastName] = name.split(" ");
 
 
   return (
     <div className="header">
       <div>
+ 
         <div className="title" />
         <h1>{id.title}</h1>
         <p>{id.location}</p>
-        <div className="tags">
-          {id.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
+        <Tags tags={id.tags} /> 
       </div>
       <div className="owner">
         <div className="name-badge">
@@ -30,13 +32,14 @@ function ApartmentDetail(props) {
           </div>
         </div>
         <div className="stars">
-        {[1, 2, 3, 4, 5].map((number) => (
-          <span key={number} className={props.flat.rating >= number ? "full" : ""}>★</span>
-        ))}
+          {[1, 2, 3, 4, 5].map((number) => (
+            <span key={number} className={props.flat.rating >= number ? "full" : ""}>★</span>
+          ))}
         </div>      
       </div>
     </div>
   );
 }
+
 
 export default ApartmentDetail;

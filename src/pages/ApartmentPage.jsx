@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
-import "./AprtPage.scss";
+import { useParams, useNavigate } from 'react-router-dom'; // Importez useNavigate de react-router-dom
+import "./ApartmentPage.scss";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
 import ApartmentDetail from "../components/ApartmentDetail";
@@ -9,19 +9,28 @@ import logementsData from '../logements.json';
 function ApartmentPage() {
   const { id } = useParams();
   const [selectedFlat, setselectedFlat] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchApartmentData();
   }, []);
 
   function fetchApartmentData() {
-    // Utilise les données directement de logementsData
     const foundApartment = logementsData.find((flat) => flat.id === id);
+
+    // Si aucun appartement n'est trouvé, effectue la redirection vers NotFoundPage
+    if (!foundApartment) {
+      // Effectue la redirection avec useNavigate
+      navigate('/logement-non-trouvé');
+      return;
+    }
+
     setselectedFlat(foundApartment);
   }
 
-  if (selectedFlat === null)
-    return <div className="loading" />;
+  if (selectedFlat === null) {
+    return null; // 
+  }
 
   return (
     <div className="apartment-page">

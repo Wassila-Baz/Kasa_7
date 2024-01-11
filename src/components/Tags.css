@@ -1,0 +1,12 @@
+.tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.tags span {
+  background-color: #FF6060;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  height: 25px;
+}/*# sourceMappingURL=Tags.css.map */

@@ -1,7 +1,7 @@
 .main {
   padding-inline: 65px;
-  margin: 0 auto; /* Set left and right margins to auto */
-  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  max-width: 1200px;
 }
 @media (max-width: 768px) {
   .main {
