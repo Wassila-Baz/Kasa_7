@@ -18,9 +18,8 @@ function ApartmentPage() {
   function fetchApartmentData() {
     const foundApartment = logementsData.find((flat) => flat.id === id);
 
-    // Si aucun appartement n'est trouvé, effectue la redirection vers NotFoundPage
     if (!foundApartment) {
-      // Effectue la redirection avec useNavigate
+  
       navigate('/logement-non-trouvé');
       return;
     }
